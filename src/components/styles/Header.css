@@ -1,0 +1,80 @@
+:root {
+  --primary-color: #071952;
+  --secondary-color: #5bc0de;
+  --danger-color: #d9534f;
+  --white-color: #ffffff;
+}
+
+.header {
+  background-color: var(--primary-color);
+}
+
+.header-title {
+  color: var(--white-color);
+}
+
+.header-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-menu {
+  right: 0;
+  /* 드롭다운 메뉴를 오른쪽에 정렬 */
+}
+
+.btn-outline-primary {
+  color: var(--primary-color);
+  background-color: var(--white-color);
+  border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+  color: var(--white-color);
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-primary {
+  color: var(--white-color);
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  color: var(--white-color);
+  background-color: #051640;
+  /* primary-color 보다 약간 어둡게 */
+  border-color: #051640;
+}
+
+.btn-secondary {
+  color: var(--white-color);
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+.btn-secondary:hover {
+  color: var(--white-color);
+  background-color: #48a7c7;
+  /* secondary-color 보다 약간 어둡게 */
+  border-color: #48a7c7;
+}
+
+.btn-danger {
+  color: var(--white-color);
+  background-color: var(--danger-color);
+  border-color: var(--danger-color);
+}
+
+.btn-danger:hover {
+  color: var(--white-color);
+  background-color: #c9302c;
+  /* danger-color 보다 약간 어둡게 */
+  border-color: #c9302c;
+}
