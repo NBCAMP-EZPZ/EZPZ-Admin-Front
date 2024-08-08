@@ -12,7 +12,6 @@ function PopupInfo() {
     const [error, setError] = useState(null);
     const [showModal, setShowModal] = useState(false);
     const [selectedImage, setSelectedImage] = useState('');
-    const navigate = useNavigate();
 
     useEffect(() => {
         const fetchPopupDetail = async () => {
@@ -66,7 +65,7 @@ function PopupInfo() {
 
     const handleApprove = async () => {
         try {
-            const data = await approvePopup(id, true);
+            await approvePopup(id, true);
             alert('팝업이 승인되었습니다.');
             setPopup({ ...popup, approvalStatus: 'APPROVED' });
         } catch (error) {
@@ -77,7 +76,7 @@ function PopupInfo() {
 
     const handleReject = async () => {
         try {
-            const data = await approvePopup(id, false);
+            await approvePopup(id, false);
             alert('팝업이 반려되었습니다.');
             setPopup({ ...popup, approvalStatus: 'REJECTED' });
         } catch (error) {
