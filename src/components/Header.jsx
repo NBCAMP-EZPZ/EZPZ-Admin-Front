@@ -25,6 +25,7 @@ function Header({ isLoggedIn }) {
     <header className="header d-flex justify-content-between align-items-center p-3">
       <h1 className="header-title">
         <Link to="/popup" className="header-link">EZPZ</Link>
+        <span className="host-label">Admin</span> {/* 노란색 Host 라벨 */}
       </h1>
       <nav className="nav-links">
         {isLoggedIn ? (
