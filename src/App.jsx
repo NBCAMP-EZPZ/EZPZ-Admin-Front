@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Header from './components/Header';
+import LoginForm from './components/LoginForm';
+import SignupForm from './components/SignupForm';
+import PopupList from './components/PopupList';
+import PopupDetail from './components/PopupDetail';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false); // 로그인 상태 관리
@@ -16,7 +21,9 @@ function App() {
     <Router>
       <Header isLoggedIn={isLoggedIn} />
       <Routes>
-        <Route path="/login" element={<LoginForm setIsLoggedIn={setIsLoggedIn} />} /> {/* setIsLoggedIn 전달 */}
+        <Route path="/popup" element={<PopupList />} />
+        <Route path="/popup/:id" element={<PopupDetail />} />
+        <Route path="/" element={<LoginForm setIsLoggedIn={setIsLoggedIn} />} />
         <Route path="/signup" element={<SignupForm />} />
       </Routes>
     </Router>
