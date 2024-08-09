@@ -6,6 +6,7 @@ const axiosInstance = axios.create({
     withCredentials: true,
     headers: {
         'Content-Type': 'application/json',
+        'Host' : 'admin.ezpzz.store'
     },
 });
 
