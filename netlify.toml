@@ -1,10 +1,17 @@
 [build]
+  functions = "netlify/functions"
   publish = "build"
   command = "npm run build"
 
+[[headers]]
+for = "/*"
+[headers.values]
+  Access-Control-Allow-Origin = "*"
+  Referrer-Policy = "strict-origin-when-cross-origin"
+
 [[redirects]]
   from = "/api/*"
-  to = "https://api.ezpzz.store/api/:splat"
+  to = "/.netlify/functions/proxy"
   status = 200
 
 [[redirects]]
