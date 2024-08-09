@@ -4,7 +4,7 @@
 
 [[redirects]]
   from = "/api/*"
-  to = "http://ezpz-alb-1989368963.ap-northeast-2.elb.amazonaws.com/api/:splat"
+  to = "https://ezpz-alb-1989368963.ap-northeast-2.elb.amazonaws.com/api/:splat"
   status = 200
 
 [[redirects]]
